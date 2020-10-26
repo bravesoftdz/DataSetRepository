@@ -17,6 +17,9 @@ type
     FDataSet: TVirtualDataSet;
     FDataName: string;
     FManager: TDataSetRepManager;
+  public
+    constructor Create(AOwner: TComponent); override;
+    destructor Destroy; override;
   published
     property DataName: string read FDataName write FDataName;
     property DataSet: TVirtualDataSet read FDataSet write FDataSet;
@@ -55,6 +58,23 @@ type
   end;
 
 implementation
+
+{ TDataSetRepository }
+
+constructor TDataSetRepository.Create(AOwner: TComponent);
+begin
+  inherited;
+
+  FDataSet := TVirtualDataSet.Create(Self);
+  FDataSet.Name := 'VirDataSet';
+  FDataSet.SetSubComponent(True);
+end;
+
+destructor TDataSetRepository.Destroy;
+begin
+
+  inherited;
+end;
 
 { TDataSetRepService }
 

@@ -30,6 +30,7 @@ package DataSetRepository;
 requires
   rtl,
   dbrtl,
+  designide,
   FireDAC,
   FireDACCommonDriver,
   FireDACCommon;
@@ -38,6 +39,7 @@ contains
   DMX.Data.DataSetRepository in '..\Sources\DMX.Data.DataSetRepository.pas',
   DSRepReg in 'DSRepReg.pas',
   DMX.Data.VirtualDataSet in '..\Sources\DMX.Data.VirtualDataSet.pas',
-  DMX.Data.DSRepDataSets in '..\Sources\DMX.Data.DSRepDataSets.pas';
+  DMX.Data.DSRepDataSets in '..\Sources\DMX.Data.DSRepDataSets.pas',
+  DSDesign in 'DSDesign.pas' {FieldsEditor};
 
 end.

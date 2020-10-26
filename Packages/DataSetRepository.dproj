@@ -3,7 +3,7 @@
         <ProjectGuid>{4C855F37-0DE4-4F5D-9953-485138B4EA5E}</ProjectGuid>
         <MainSource>DataSetRepository.dpk</MainSource>
         <ProjectVersion>19.1</ProjectVersion>
-        <FrameworkType>None</FrameworkType>
+        <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
@@ -64,7 +64,7 @@
         <DCC_K>false</DCC_K>
         <GenDll>true</GenDll>
         <GenPackage>true</GenPackage>
-        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
         <DCC_CBuilderOutput>All</DCC_CBuilderOutput>
         <SanitizedProjectName>DataSetRepository</SanitizedProjectName>
     </PropertyGroup>
@@ -112,6 +112,7 @@
         </DelphiCompile>
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="dbrtl.dcp"/>
+        <DCCReference Include="designide.dcp"/>
         <DCCReference Include="FireDAC.dcp"/>
         <DCCReference Include="FireDACCommonDriver.dcp"/>
         <DCCReference Include="FireDACCommon.dcp"/>
@@ -119,6 +120,10 @@
         <DCCReference Include="DSRepReg.pas"/>
         <DCCReference Include="..\Sources\DMX.Data.VirtualDataSet.pas"/>
         <DCCReference Include="..\Sources\DMX.Data.DSRepDataSets.pas"/>
+        <DCCReference Include="DSDesign.pas">
+            <Form>FieldsEditor</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
