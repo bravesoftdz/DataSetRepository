@@ -33,13 +33,15 @@ requires
   designide,
   FireDAC,
   FireDACCommonDriver,
-  FireDACCommon;
+  FireDACCommon,
+  vclwinx,
+  vcldb,
+  dcldb;
 
 contains
   DMX.Data.DataSetRepository in '..\Sources\DMX.Data.DataSetRepository.pas',
   DSRepReg in 'DSRepReg.pas',
   DMX.Data.VirtualDataSet in '..\Sources\DMX.Data.VirtualDataSet.pas',
-  DMX.Data.DSRepDataSets in '..\Sources\DMX.Data.DSRepDataSets.pas',
-  DSDesign in 'DSDesign.pas' {FieldsEditor};
+  DMX.Data.DSRepDataSets in '..\Sources\DMX.Data.DSRepDataSets.pas';
 
 end.
